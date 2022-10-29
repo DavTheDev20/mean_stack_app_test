@@ -1,0 +1,18 @@
+<div style="margin-left: 1%">
+  <h1>{{ postData.title }}</h1>
+  <h3 style="margin: 1% 0 1.5%; color: rgba(128, 128, 128, 0.568)">
+    Posted On: {{ postData.createdAt | date: "mediumDate" }} at
+    {{ postData.createdAt | date: "shortTime" }}
+  </h3>
+  <hr />
+  <br />
+  <p style="white-space: pre-line">{{ postData.content }}</p>
+  <br />
+  <button
+    type="button"
+    (click)="goBack()"
+    style="cursor: pointer; padding: 10px; margin-bottom: 1%"
+  >
+    Go Back
+  </button>
+</div>

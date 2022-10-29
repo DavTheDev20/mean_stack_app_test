@@ -1,0 +1,26 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: lightgray;
+  height: 10vh;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 15%;
+  list-style: none;
+}
+
+nav a {
+  color: blue;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav .disabled {
+  color: gray;
+  user-select: none;
+  cursor: not-allowed;
+}

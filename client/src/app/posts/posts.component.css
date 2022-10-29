@@ -1,0 +1,23 @@
+.post-comp {
+  margin-left: 1%;
+}
+
+.post {
+  width: 40%;
+  margin: 1% 0;
+}
+
+.form-create {
+  margin: 1.5% 0;
+  font-size: 16px;
+}
+.form-create input,
+.form-create textarea {
+  font-size: 16px;
+  margin: 5px 0;
+  padding-left: 5px;
+}
+
+.form-create input {
+  height: 30px;
+}

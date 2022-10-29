@@ -19,6 +19,7 @@
   "scripts": {
     "start": "node ./server/server.js",
     "server": "nodemon ./server/server.js",
-    "client": "cd client && ng serve --open"
+    "client": "cd client && ng serve --open",
+    "dev": "concurrently \"yarn server\" \"yarn client\""
   }
 }

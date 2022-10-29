@@ -1,7 +1,15 @@
 <nav>
-  <a href="#" class="nav-link">Logo</a>
-  <li>
-    <a href="#" class="nav-link">Posts</a>
-    <a href="#" class="nav-link">About</a>
-  </li>
+  <div style="display: flex; align-items: center">
+    <img src="assets/angular.png" width="35" />
+    <a routerLink="/" class="nav-link">Angular Blog</a>
+  </div>
+  <ul>
+    <li>
+      <a routerLink="/posts" class="nav-link">Posts</a>
+    </li>
+    <li>
+      <a class="nav-link disabled">About</a>
+    </li>
+  </ul>
 </nav>
+<router-outlet></router-outlet>

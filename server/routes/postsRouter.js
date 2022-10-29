@@ -25,6 +25,15 @@ postsRouter
         return res.status(500).json({ success: false, error: error.message });
     }
 }))
+    .get('/:postId', (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const post = yield post_1.default.findOne({ _id: req.params.postId });
+        return res.status(200).json({ success: true, post: post });
+    }
+    catch (error) {
+        return res.status(500).json({ success: false, error: error.message });
+    }
+}))
     .post('/', (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const responseData = req.body;

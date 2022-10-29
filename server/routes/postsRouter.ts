@@ -17,6 +17,14 @@ postsRouter
       return res.status(500).json({ success: false, error: error.message });
     }
   })
+  .get('/:postId', async (req, res, next) => {
+    try {
+      const post = await Post.findOne({ _id: req.params.postId });
+      return res.status(200).json({ success: true, post: post });
+    } catch (error: any) {
+      return res.status(500).json({ success: false, error: error.message });
+    }
+  })
   .post('/', async (req, res, next) => {
     try {
       const responseData = <PostResponse>req.body;
