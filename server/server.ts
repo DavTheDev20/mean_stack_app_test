@@ -11,6 +11,14 @@ const app = express();
 const PORT: string | number = <string>process.env.PORT || 8080;
 const NODE_ENV: string = <string>process.env.NODE_ENV;
 
+if (!NODE_ENV) {
+  console.log(
+    '\x1b[31m',
+    '   ERROR: No NODE_ENV specified. NODE_ENV must be set to development or production.'
+  );
+  process.exit(1);
+}
+
 dbConnect();
 
 app.use(express.urlencoded({ extended: false }));
@@ -34,6 +42,7 @@ if (NODE_ENV === 'production') {
     '/',
     express.static(path.join(__dirname, '..', 'client', 'dist', 'client'))
   );
+  console.log('!!! App is running in production mode !!!');
 }
 
 app.listen(PORT, () => console.log(`Server running on port: ${PORT}`));

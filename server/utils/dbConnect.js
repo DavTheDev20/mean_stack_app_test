@@ -30,6 +30,10 @@ const dotenv = __importStar(require("dotenv"));
 dotenv.config();
 const mongoose_1 = __importDefault(require("mongoose"));
 const MONGODB_URI = process.env.MONGODB_URI;
+if (!MONGODB_URI) {
+    console.log('\x1b[31m', '   ERROR: No MONGODB_URI specified. Must specify MONGODB_URI to run MongoDB database.');
+    process.exit(1);
+}
 /***
  * Connects server to MongoDB database.
  */
