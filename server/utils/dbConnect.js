@@ -29,7 +29,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv = __importStar(require("dotenv"));
 dotenv.config();
 const mongoose_1 = __importDefault(require("mongoose"));
-const MONGODB_URI = 'mongodb://0.0.0.0:27017/mean-stack_app_test-DB';
+const MONGODB_URI = process.env.MONGODB_URI;
 /***
  * Connects server to MongoDB database.
  */

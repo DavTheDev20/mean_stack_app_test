@@ -2,7 +2,7 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 import mongoose from 'mongoose';
 
-const MONGODB_URI = 'mongodb://0.0.0.0:27017/mean-stack_app_test-DB';
+const MONGODB_URI: string = <string>process.env.MONGODB_URI;
 
 /***
  * Connects server to MongoDB database.
