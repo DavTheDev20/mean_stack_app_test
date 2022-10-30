@@ -40,7 +40,8 @@ if (!MONGODB_URI) {
 const dbConnect = () => {
     mongoose_1.default.connect(MONGODB_URI, {}, (err) => {
         if (err) {
-            console.log(err);
+            console.log('\x1b[31m', err);
+            process.exit(1);
         }
         else {
             console.log('Connected to database');
