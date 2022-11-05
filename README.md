@@ -1,4 +1,4 @@
-# MEAM Stack App
+# MEAN Stack App
 
 ## Created on: 10/28/2022
 
